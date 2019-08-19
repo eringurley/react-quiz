@@ -1,42 +1,25 @@
 import React, { Component } from 'react';
-import PropType from 'prop-types';
 
 export default class NameTag extends Component {
-  static propTypes = {
-    maxChar: PropType.number
-  }
-
-  static defaultProps = {
-    maxChar: 40
-  }
-
   state = {
-    charInput: '',
-    totalChar: 0
-  };
-
-  handleNumberChange = ({ target }) => {
-    this.setState({ charInput: Number.parseInt(target.value) });
+    text: '',
   }
-
-  handleSubmit = event => {
-    event.preventDefault();
-    this.setState(state => {
-      return {
-        totalChar: state.charInput + state.totalChar,
-        charInput: ''
-      };
+  
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value }, () => {
+      this.parseText();
     });
   }
-
+  
   render() {
+    const { text } = this.state;
+
     return (
-    <>
-    <NameTag
-      char={this.state.charInput}
-      handleNumberChange={this.handleNumberChange}
-      handleSubmit={this.handleSubmit} />
-    </>
+      <>
+        <form>
+          <input placeholder="Type Here" name="text" value={text} onChange={this.handleChange}></input>
+        </form>
+      </>
     );
-  } 
+  }
 }
