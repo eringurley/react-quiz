@@ -7,7 +7,6 @@ export default class NameTag extends Component {
   
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value }, () => {
-      this.parseText();
     });
   }
   
@@ -19,7 +18,9 @@ export default class NameTag extends Component {
         <form>
           <input placeholder="Type Here" name="text" value={text} onChange={this.handleChange}></input>
         </form>
+        {text}
       </>
     );
   }
+
 }

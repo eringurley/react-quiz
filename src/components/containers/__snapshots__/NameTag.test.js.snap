@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NameTag component renders NameTag 1`] = `
+<Fragment>
+  <form>
+    <input
+      name="text"
+      onChange={[Function]}
+      placeholder="Type Here"
+      value=""
+    />
+  </form>
+</Fragment>
+`;
