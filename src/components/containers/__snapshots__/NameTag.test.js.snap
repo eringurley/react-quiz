@@ -2,13 +2,21 @@
 
 exports[`NameTag component renders NameTag 1`] = `
 <Fragment>
-  <form>
-    <input
-      name="text"
-      onChange={[Function]}
-      placeholder="Type Here"
-      value=""
-    />
-  </form>
+  <TextSelector
+    handleSubmit={[Function]}
+    handleTextChange={[Function]}
+    text=""
+  />
+  <ColorSelector
+    backgroundColor=""
+    color=""
+    handleBackgroundChange={[Function]}
+    handleColorChange={[Function]}
+  />
+  <Shape
+    backgroundColor=""
+    color=""
+    text=""
+  />
 </Fragment>
 `;
