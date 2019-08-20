@@ -7,7 +7,9 @@ function TextSelector({ text, handleTextChange, handleSubmit }) {
         <form onSubmit={handleSubmit}>
           <input 
             placeholder="Full Name" 
-            name="text" value={text} 
+            name="text" 
+            maxLength="25"
+            value={text} 
             onChange={handleTextChange}></input>
         </form>
         {text}

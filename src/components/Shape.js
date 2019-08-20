@@ -5,8 +5,8 @@ function Shape({ text, color, backgroundColor }) {
   return (
     <>
       <div style={{ 
-        width: '100px', 
-        height: '100px',
+        width: '200px', 
+        height: '200px',
       }}>
         <pre style ={{
           color: color,
