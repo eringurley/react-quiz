@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextSelector component renders TextSelector 1`] = `
+<Fragment>
+  <form>
+    <input
+      maxLength="25"
+      name="text"
+      placeholder="Full Name"
+    />
+  </form>
+</Fragment>
+`;
